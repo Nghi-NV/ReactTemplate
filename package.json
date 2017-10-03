@@ -13,8 +13,10 @@
     "express": "^4.16.1",
     "history": "^4.7.2",
     "node-sass": "^4.5.3",
+    "prop-types": "^15.6.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
+    "react-hot-loader": "^3.0.0-beta.7",
     "react-localization": "^0.1.2",
     "react-redux": "^5.0.6",
     "react-router-redux": "^5.0.0-alpha.6",
@@ -32,11 +34,13 @@
     "babel-preset-stage-2": "^6.24.1",
     "css-loader": "^0.28.7",
     "cssnano": "^3.10.0",
+    "extract-text-webpack-plugin": "^3.0.0",
     "lost": "^8.2.0",
     "postcss-loader": "^2.0.6",
     "rucksack": "^2.3.4",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
-    "webpack": "^3.6.0"
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.9.1"
   }
 }
