@@ -15,19 +15,15 @@ module.exports = {
       {
         test: /\.css$/,
         exclude: /node_modules/,
+        use: [ 'style-loader', 'postcss-loader' ]
+      },
+      {
+        test: /\.scss$/,
         use: [
-          {
-            loader: 'style-loader'
-          },
-          {
-            loader: 'css-loader',
-            options: {
-              importLoaders: 1,
-            }
-          },
-          {
-            loader: 'postcss-loader'
-          }
+          { loader: 'style-loader' },
+          { loader: 'css-loader' },
+          { loader: 'sass-loader' },
+          { loader: 'postcss-loader' }
         ]
       }
     ]

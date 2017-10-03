@@ -1,10 +1,8 @@
 import { combineReducers } from 'redux';
-import { routerReducer } from 'react-router-redux'
-import todoReducer from './todoReducer';
-
-// import other reducer...
+import { routerReducer } from 'react-router-redux';
+import settingReducer from './settingReducer';
 
 export default combineReducers({
   router: routerReducer,
-  todo: todoReducer
+  setting: settingReducer
 });

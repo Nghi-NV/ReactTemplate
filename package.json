@@ -1,11 +1,28 @@
 {
   "name": "Template",
   "version": "1.0.0",
+  "description": "",
   "main": "server.js",
+  "author": "NghiNV",
+  "license": "",
   "script": {
     "start": "server.js"
   },
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.16.1",
+    "history": "^4.7.2",
+    "node-sass": "^4.5.3",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-localization": "^0.1.2",
+    "react-redux": "^5.0.6",
+    "react-router-redux": "^5.0.0-alpha.6",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0"
+  },
   "devDependencies": {
+    "autoprefixer": "^7.1.4",
     "babel": "^6.23.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
@@ -14,19 +31,12 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "css-loader": "^0.28.7",
+    "cssnano": "^3.10.0",
+    "lost": "^8.2.0",
     "postcss-loader": "^2.0.6",
+    "rucksack": "^2.3.4",
+    "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
     "webpack": "^3.6.0"
-  },
-  "dependencies": {
-    "ejs": "^2.5.7",
-    "express": "^4.16.1",
-    "history": "^4.7.2",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
-    "react-redux": "^5.0.6",
-    "react-router-redux": "^5.0.0-alpha.6",
-    "redux": "^3.7.2",
-    "redux-thunk": "^2.2.0"
   }
 }
