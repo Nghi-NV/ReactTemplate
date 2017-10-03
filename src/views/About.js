@@ -6,12 +6,21 @@ import './styles.scss';
 class About extends Component {
   render() {
     return (
-      <div style={{height: '200px', width: '200px', color: 'white'}}>
+      <div>
         This is About component
-        <div className="content">
-          Hello SCSS
+        <div className="content blabla">
+          Ngày xuân con én đưa thoi
+          Thiều quang chín chục đã ngoài tám mươi
+          Cỏ non xanh rợn chân trời
+          Cành lê trắng điểm một vài bông hoa
+          Thanh minh trong tiết tháng ba
+          Lễ là tảo mộ hội là đạp thanh
+          Gần xa nô nức yến anh
+          Chị em sắm sửa bộ hành chơi xuân
+          Dập dìu tài tử giai nhân
+          Ngựa xe như nước áo quần như nêm
         </div>
-        <div style={styles.btn}>
+        <div className="btn">
           Button
         </div>
       </div>
@@ -19,21 +28,21 @@ class About extends Component {
   }
 }
 
-const styles = {
-  btn: {
-    width: 350*2,
-    height: 36,
-    borderRadius: 8,
-    backgroundColor: 'skyblue',
-    marginTop: 12,
-    marginLeft: 24,
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    fontFamily: 'roboto-light',
-    fontSize: '1em',
-    fontWeight: '100',
-  }
-}
+// const styles = {
+//   btn: {
+//     width: 350*2,
+//     height: 36,
+//     borderRadius: 8,
+//     backgroundColor: 'skyblue',
+//     marginTop: 12,
+//     marginLeft: 24,
+//     display: 'flex',
+//     justifyContent: 'center',
+//     alignItems: 'center',
+//     fontFamily: 'roboto-light',
+//     fontSize: '1em',
+//     fontWeight: '100',
+//   }
+// }
 
 export default About;

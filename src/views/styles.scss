@@ -1,5 +1,36 @@
+:root {
+  --blue: skyblue;
+  --hoverColor: lightblue;
+}
+
 .content {
-  width: 200px;
-  height: 300px;
+  width: 100%;
+  height: auto;
   background-color: red;
+  color: white;
+}
+
+.blabla {
+  border-radius: 8px;
+  font-size: 1em;
+}
+
+.btn {
+  width: auto;
+  max-width: 350px;
+  height: 36px;
+  border-radius: 8px;
+  background-color: color(var(--blue));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  margin-left: 100px;
+  color: white;
+  &:hover {
+    background-color: color(var(--hoverColor) a(50%));
+  };
+  font-family: 'Roboto-light';
+  font-size: 1em;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, .5);
 }

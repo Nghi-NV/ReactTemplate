@@ -5550,16 +5550,16 @@ var About = function (_Component) {
     value: function render() {
       return _react2.default.createElement(
         'div',
-        { style: { height: '200px', width: '200px', color: 'white' } },
+        null,
         'This is About component',
         _react2.default.createElement(
           'div',
-          { className: 'content' },
-          'Hello SCSS'
+          { className: 'content blabla' },
+          'Ng\xE0y xu\xE2n con \xE9n \u0111\u01B0a thoi Thi\u1EC1u quang ch\xEDn ch\u1EE5c \u0111\xE3 ngo\xE0i t\xE1m m\u01B0\u01A1i C\u1ECF non xanh r\u1EE3n ch\xE2n tr\u1EDDi C\xE0nh l\xEA tr\u1EAFng \u0111i\u1EC3m m\u1ED9t v\xE0i b\xF4ng hoa Thanh minh trong ti\u1EBFt th\xE1ng ba L\u1EC5 l\xE0 t\u1EA3o m\u1ED9 h\u1ED9i l\xE0 \u0111\u1EA1p thanh G\u1EA7n xa n\xF4 n\u1EE9c y\u1EBFn anh Ch\u1ECB em s\u1EAFm s\u1EEDa b\u1ED9 h\xE0nh ch\u01A1i xu\xE2n D\u1EADp d\xECu t\xE0i t\u1EED giai nh\xE2n Ng\u1EF1a xe nh\u01B0 n\u01B0\u1EDBc \xE1o qu\u1EA7n nh\u01B0 n\xEAm'
         ),
         _react2.default.createElement(
           'div',
-          { style: styles.btn },
+          { className: 'btn' },
           'Button'
         )
       );
@@ -5569,22 +5569,22 @@ var About = function (_Component) {
   return About;
 }(_react.Component);
 
-var styles = {
-  btn: {
-    width: 350 * 2,
-    height: 36,
-    borderRadius: 8,
-    backgroundColor: 'skyblue',
-    marginTop: 12,
-    marginLeft: 24,
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    fontFamily: 'roboto-light',
-    fontSize: '1em',
-    fontWeight: '100'
-  }
-};
+// const styles = {
+//   btn: {
+//     width: 350*2,
+//     height: 36,
+//     borderRadius: 8,
+//     backgroundColor: 'skyblue',
+//     marginTop: 12,
+//     marginLeft: 24,
+//     display: 'flex',
+//     justifyContent: 'center',
+//     alignItems: 'center',
+//     fontFamily: 'roboto-light',
+//     fontSize: '1em',
+//     fontWeight: '100',
+//   }
+// }
 
 exports.default = About;
 
@@ -31087,7 +31087,7 @@ exports = module.exports = __webpack_require__(145)(undefined);
 
 
 // module
-exports.push([module.i, ".content {\n  width: 200px;\n  height: 300px;\n  background-color: red; }\n", ""]);
+exports.push([module.i, ".content {\n  width: 100%;\n  height: auto;\n  background-color: red;\n  color: #fff; }\n\n.blabla, .btn {\n  border-radius: 8px;\n  font-size: 1em; }\n\n.btn {\n  width: auto;\n  max-width: 350px;\n  height: 36px;\n  background-color: #87ceeb;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  margin-top: 100px;\n  margin-left: 100px;\n  color: #fff;\n  font-family: Roboto-light;\n  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);\n  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5); }\n\n.btn:hover {\n  background-color: rgba(173, 216, 230, 0.5); }\n", ""]);
 
 // exports
 
