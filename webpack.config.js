@@ -25,6 +25,14 @@ module.exports = {
           { loader: 'sass-loader' },
           { loader: 'postcss-loader' }
         ]
+      },
+      {
+        test: /\.(png|jpg|gif)$/,
+        exclude: /node_modules/,
+        loader: 'file-loader',
+        options: {
+          name: '[path][name].[ext]'
+        }
       }
     ]
   }

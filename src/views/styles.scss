@@ -9,4 +9,12 @@
   align-items: center;
   height: 600px;
   background-color: transparent;
+  flex-direction: column;
+}
+
+.btn {
+  width: 100px;
+  height: 36px;
+  background-color: red;
+  margin-top: 20px;
 }

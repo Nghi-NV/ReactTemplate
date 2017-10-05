@@ -1,0 +1,13 @@
+@import "./setting.scss";
+
+.textInput {
+  @include txtInput;
+  border-radius: 5px;
+  &:focus {
+    background-color: rgba(black, .8);
+    border: 1px solid skyblue;
+  }
+  &:hover {
+    background-color: rgba(black, .8);
+  }
+}
