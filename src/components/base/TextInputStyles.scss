@@ -11,3 +11,11 @@
     background-color: rgba(black, .8);
   }
 }
+
+.security {
+  @include enableSecurity;
+}
+
+.enableError {
+  @include isError;
+}

@@ -1,0 +1,14 @@
+@import './setting.scss';
+
+.switch {
+    width: 50px;
+    height: 26px;
+    transition: .01s .23s ease-out all;
+    &:hover {
+        box-shadow: 2px 2px 8px rgba(black, .2)
+    }
+}
+
+.disabled {
+    opacity: .8
+}

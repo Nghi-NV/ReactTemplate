@@ -1,5 +1,6 @@
 import {
-  SET_LANGUAGE
+  SET_LANGUAGE,
+  SET_THEME
 } from '../types';
 
 import langs from '../../config/langs';
@@ -13,6 +14,13 @@ export const setLanguage = (value) => {
 
   return {
     type: SET_LANGUAGE,
+    payload: value
+  }
+}
+
+export const setTheme = (value) => {
+  return {
+    type: SET_THEME,
     payload: value
   }
 }

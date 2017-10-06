@@ -13,48 +13,48 @@
 .primary {
   background-color: skyblue;
   color: white;
-  &:hover {
-    opacity: .8;
-  }
   &:active {
     opacity: 1;
     background-color: rgba(skyblue, .8);
+  }
+  &:hover {
+    opacity: .8;
   }
 }
 
 .secondary {
   background-color: lightblue;
   color: white;
-  &:hover {
-    opacity: .8;
-  }
   &:active {
     opacity: 1;
     background-color: rgba(lightblue, .8);
+  }
+  &:hover {
+    opacity: .8;
   }
 }
 
 .tertiary {
   background-color: green;
   color: white;
-  &:hover {
-    opacity: .8;
-  }
   &:active {
     opacity: 1;
     background-color: rgba(green, .8);
+  }
+  &:hover {
+    opacity: .8;
   }
 }
 
 .danger {
   background-color: red;
   color: white;
-  &:hover {
-    opacity: .8;
-  }
   &:active {
     opacity: 1;
     background-color: rgba(red, .8);
+  }
+  &:hover {
+    opacity: .8;
   }
 }
 

@@ -58,6 +58,20 @@ $smoke       : #EEEEEE;
   padding-right: 8px;
 }
 
+@mixin enableSecurity {
+  -webkit-text-security: disc;
+}
+
+@mixin isError {
+  border: 1px solid rgba(red, .4);
+  background-color: rgba(red, .1)
+}
+
+@mixin noFill {
+  border: 0;
+  background-color: transparent;
+}
+
 /*Color code
 $white       : #FFFFFF;
 $ghost       : #FAFAFA;
