@@ -45,6 +45,24 @@
   }
 }
 
+.nav {
+  display: flex;
+  height: 96px;
+  width: 100%;
+  background-color: rgba(white, .3);
+  align-items: center;
+  justify-content: center;
+}
+
+.link {
+  color: skyblue;
+  padding: 20px;
+  display: flex;
+  font-family: 'Roboto-light';
+  font-size: 2em;
+  text-decoration-line: none;
+}
+
 .bao {
   border: 1px solid greenyellow;
   padding: 20px;

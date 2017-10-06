@@ -5848,7 +5848,6 @@ var styles = {
 };
 
 var mapStateToProps = function mapStateToProps(state) {
-  console.log('Current theme: ', state.setting.theme);
   return {
     theme: state.setting.theme
   };
@@ -5880,6 +5879,10 @@ var _react2 = _interopRequireDefault(_react);
 var _reactRedux = __webpack_require__(24);
 
 var _reactRouterRedux = __webpack_require__(12);
+
+var _Nav = __webpack_require__(185);
+
+var _Nav2 = _interopRequireDefault(_Nav);
 
 var _actions = __webpack_require__(131);
 
@@ -5932,17 +5935,22 @@ var Home = function (_Component) {
 
       return _react2.default.createElement(
         'div',
-        { className: 'container' },
-        _react2.default.createElement(
-          'button',
-          { onClick: this.handleClick.bind(this) },
-          setting.language == "en" ? "English" : "Tieng Viet"
-        ),
-        'This is Home component',
+        { style: { display: 'flex', flex: 1, flexDirection: 'column' } },
+        _react2.default.createElement(_Nav2.default, null),
         _react2.default.createElement(
           'div',
-          null,
-          _langs2.default.login
+          { className: 'container' },
+          _react2.default.createElement(
+            'button',
+            { onClick: this.handleClick.bind(this) },
+            setting.language == "en" ? "English" : "Tieng Viet"
+          ),
+          'This is Home component',
+          _react2.default.createElement(
+            'div',
+            null,
+            _langs2.default.login
+          )
         )
       );
     }
@@ -5973,6 +5981,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 var SET_LANGUAGE = exports.SET_LANGUAGE = "SET_LANGUAGE";
 var SET_THEME = exports.SET_THEME = "SET_THEME";
+var GET_LANGUAGE = exports.GET_LANGUAGE = "GET_LANGUAGE";
+var GET_THEME = exports.GET_THEME = "GET_THEME";
 
 /***/ }),
 /* 64 */
@@ -6605,6 +6615,10 @@ var _reactScroll = __webpack_require__(151);
 
 var _reactScroll2 = _interopRequireDefault(_reactScroll);
 
+var _Nav = __webpack_require__(185);
+
+var _Nav2 = _interopRequireDefault(_Nav);
+
 var _Button = __webpack_require__(157);
 
 var _Button2 = _interopRequireDefault(_Button);
@@ -6699,173 +6713,178 @@ var About = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      console.log('height', this.state.height);
       return _react2.default.createElement(
         'div',
-        { className: _styles2.default.container },
-        _react2.default.createElement(_Switch2.default, {
-          onClick: this.onClick.bind(this)
-
-        }),
-        _react2.default.createElement(
-          'li',
-          null,
-          ' ',
-          _react2.default.createElement(
-            'a',
-            { className: _styles2.default.element, onClick: function onClick() {
-                return scroll.scrollToBottom();
-              } },
-            'Scroll To Bottom'
-          )
-        ),
-        _react2.default.createElement(
-          Link,
-          { activeClass: 'active', className: _styles2.default.element, to: 'test5', spy: true, smooth: true, duration: 500 },
-          'Test 1'
-        ),
-        _react2.default.createElement('br', null),
+        { style: { display: 'flex', flex: 1, flexDirection: 'column' } },
+        _react2.default.createElement(_Nav2.default, null),
         _react2.default.createElement(
           'div',
-          { className: _styles2.default.bao },
+          { className: _styles2.default.container },
+          _react2.default.createElement(_Switch2.default, {
+            onClick: this.onClick.bind(this)
+
+          }),
+          _react2.default.createElement('hr', null),
+          _react2.default.createElement(
+            'li',
+            null,
+            ' ',
+            _react2.default.createElement(
+              'a',
+              { className: _styles2.default.element, onClick: function onClick() {
+                  return scroll.scrollToBottom();
+                } },
+              'Scroll To Bottom'
+            )
+          ),
+          _react2.default.createElement(
+            Link,
+            { activeClass: 'active', className: _styles2.default.element, to: 'test5', spy: true, smooth: true, duration: 500 },
+            'Test 1'
+          ),
+          _react2.default.createElement('br', null),
           _react2.default.createElement(
             'div',
-            {
-              onScroll: this.handleScroll.bind(this),
-              className: _styles2.default.scrolls },
+            { className: _styles2.default.bao },
             _react2.default.createElement(
-              Element,
-              { name: 'test1', className: _styles2.default.element },
-              'test 1',
+              'div',
+              {
+                onScroll: this.handleScroll.bind(this),
+                className: _styles2.default.scrolls },
+              _react2.default.createElement(
+                Element,
+                { name: 'test1', className: _styles2.default.element },
+                'test 1',
+                _react2.default.createElement('br', null),
+                'Ng\xE0y xu\xE2n con \xE9n \u0111\u01B0a thoi',
+                _react2.default.createElement('br', null),
+                'Thi\u1EC1u quang ch\xEDn ch\u1EE5c \u0111\xE3 ngo\xE0i t\xE1m m\u01B0\u01A1i',
+                _react2.default.createElement('br', null),
+                'C\u1ECF non xanh r\u1EE3n ch\xE2n tr\u1EDDi',
+                _react2.default.createElement('br', null),
+                'C\xE0nh l\xEA tr\u1EAFng \u0111i\u1EC3m m\u1ED9t v\xE0i b\xF4ng hoa',
+                _react2.default.createElement('br', null),
+                'Thanh minh trong ti\u1EBFt th\xE1ng ba',
+                _react2.default.createElement('br', null),
+                'L\u1EC5 l\xE0 t\u1EA3o m\u1ED9 h\u1ED9i l\xE0 \u0111\u1EA1p Thanh',
+                _react2.default.createElement('br', null),
+                'G\u1EA7n xa n\xF4 n\u1EE9c y\u1EBFn anh',
+                _react2.default.createElement('br', null),
+                'Ch\u1ECB em s\u1EAFm s\u1EEDa b\u1ED9 h\xE0nh ch\u01A1i xu\xE2n',
+                _react2.default.createElement('br', null),
+                'D\u1EADp d\xECu t\xE0i t\u1EED giai nh\xE2n',
+                _react2.default.createElement('br', null),
+                'Ng\u1EF1a xe nh\u01B0 n\u01B0\u1EDBc \xE1o qu\u1EA7n nh\u01B0 n\xEAm',
+                _react2.default.createElement('br', null)
+              ),
               _react2.default.createElement('br', null),
-              'Ng\xE0y xu\xE2n con \xE9n \u0111\u01B0a thoi',
+              _react2.default.createElement(
+                Element,
+                { name: 'test2', className: _styles2.default.element },
+                '2',
+                _react2.default.createElement('br', null),
+                'Ng\xE0y xu\xE2n con \xE9n \u0111\u01B0a thoi',
+                _react2.default.createElement('br', null),
+                'Thi\u1EC1u quang ch\xEDn ch\u1EE5c \u0111\xE3 ngo\xE0i t\xE1m m\u01B0\u01A1i',
+                _react2.default.createElement('br', null),
+                'C\u1ECF non xanh r\u1EE3n ch\xE2n tr\u1EDDi',
+                _react2.default.createElement('br', null),
+                'C\xE0nh l\xEA tr\u1EAFng \u0111i\u1EC3m m\u1ED9t v\xE0i b\xF4ng hoa',
+                _react2.default.createElement('br', null),
+                'Thanh minh trong ti\u1EBFt th\xE1ng ba',
+                _react2.default.createElement('br', null),
+                'L\u1EC5 l\xE0 t\u1EA3o m\u1ED9 h\u1ED9i l\xE0 \u0111\u1EA1p Thanh',
+                _react2.default.createElement('br', null),
+                'G\u1EA7n xa n\xF4 n\u1EE9c y\u1EBFn anh',
+                _react2.default.createElement('br', null),
+                'Ch\u1ECB em s\u1EAFm s\u1EEDa b\u1ED9 h\xE0nh ch\u01A1i xu\xE2n',
+                _react2.default.createElement('br', null),
+                'D\u1EADp d\xECu t\xE0i t\u1EED giai nh\xE2n',
+                _react2.default.createElement('br', null),
+                'Ng\u1EF1a xe nh\u01B0 n\u01B0\u1EDBc \xE1o qu\u1EA7n nh\u01B0 n\xEAm',
+                _react2.default.createElement('br', null)
+              ),
               _react2.default.createElement('br', null),
-              'Thi\u1EC1u quang ch\xEDn ch\u1EE5c \u0111\xE3 ngo\xE0i t\xE1m m\u01B0\u01A1i',
+              _react2.default.createElement(
+                Element,
+                { name: 'test3', className: _styles2.default.element },
+                'test 3',
+                _react2.default.createElement('br', null),
+                'Ng\xE0y xu\xE2n con \xE9n \u0111\u01B0a thoi',
+                _react2.default.createElement('br', null),
+                'Thi\u1EC1u quang ch\xEDn ch\u1EE5c \u0111\xE3 ngo\xE0i t\xE1m m\u01B0\u01A1i',
+                _react2.default.createElement('br', null),
+                'C\u1ECF non xanh r\u1EE3n ch\xE2n tr\u1EDDi',
+                _react2.default.createElement('br', null),
+                'C\xE0nh l\xEA tr\u1EAFng \u0111i\u1EC3m m\u1ED9t v\xE0i b\xF4ng hoa',
+                _react2.default.createElement('br', null),
+                'Thanh minh trong ti\u1EBFt th\xE1ng ba',
+                _react2.default.createElement('br', null),
+                'L\u1EC5 l\xE0 t\u1EA3o m\u1ED9 h\u1ED9i l\xE0 \u0111\u1EA1p Thanh',
+                _react2.default.createElement('br', null),
+                'G\u1EA7n xa n\xF4 n\u1EE9c y\u1EBFn anh',
+                _react2.default.createElement('br', null),
+                'Ch\u1ECB em s\u1EAFm s\u1EEDa b\u1ED9 h\xE0nh ch\u01A1i xu\xE2n',
+                _react2.default.createElement('br', null),
+                'D\u1EADp d\xECu t\xE0i t\u1EED giai nh\xE2n',
+                _react2.default.createElement('br', null),
+                'Ng\u1EF1a xe nh\u01B0 n\u01B0\u1EDBc \xE1o qu\u1EA7n nh\u01B0 n\xEAm',
+                _react2.default.createElement('br', null)
+              ),
               _react2.default.createElement('br', null),
-              'C\u1ECF non xanh r\u1EE3n ch\xE2n tr\u1EDDi',
+              _react2.default.createElement(
+                Element,
+                { name: 'test4', className: _styles2.default.element },
+                'test 4',
+                _react2.default.createElement('br', null),
+                'Ng\xE0y xu\xE2n con \xE9n \u0111\u01B0a thoi',
+                _react2.default.createElement('br', null),
+                'Thi\u1EC1u quang ch\xEDn ch\u1EE5c \u0111\xE3 ngo\xE0i t\xE1m m\u01B0\u01A1i',
+                _react2.default.createElement('br', null),
+                'C\u1ECF non xanh r\u1EE3n ch\xE2n tr\u1EDDi',
+                _react2.default.createElement('br', null),
+                'C\xE0nh l\xEA tr\u1EAFng \u0111i\u1EC3m m\u1ED9t v\xE0i b\xF4ng hoa',
+                _react2.default.createElement('br', null),
+                'Thanh minh trong ti\u1EBFt th\xE1ng ba',
+                _react2.default.createElement('br', null),
+                'L\u1EC5 l\xE0 t\u1EA3o m\u1ED9 h\u1ED9i l\xE0 \u0111\u1EA1p Thanh',
+                _react2.default.createElement('br', null),
+                'G\u1EA7n xa n\xF4 n\u1EE9c y\u1EBFn anh',
+                _react2.default.createElement('br', null),
+                'Ch\u1ECB em s\u1EAFm s\u1EEDa b\u1ED9 h\xE0nh ch\u01A1i xu\xE2n',
+                _react2.default.createElement('br', null),
+                'D\u1EADp d\xECu t\xE0i t\u1EED giai nh\xE2n',
+                _react2.default.createElement('br', null),
+                'Ng\u1EF1a xe nh\u01B0 n\u01B0\u1EDBc \xE1o qu\u1EA7n nh\u01B0 n\xEAm',
+                _react2.default.createElement('br', null)
+              ),
               _react2.default.createElement('br', null),
-              'C\xE0nh l\xEA tr\u1EAFng \u0111i\u1EC3m m\u1ED9t v\xE0i b\xF4ng hoa',
-              _react2.default.createElement('br', null),
-              'Thanh minh trong ti\u1EBFt th\xE1ng ba',
-              _react2.default.createElement('br', null),
-              'L\u1EC5 l\xE0 t\u1EA3o m\u1ED9 h\u1ED9i l\xE0 \u0111\u1EA1p Thanh',
-              _react2.default.createElement('br', null),
-              'G\u1EA7n xa n\xF4 n\u1EE9c y\u1EBFn anh',
-              _react2.default.createElement('br', null),
-              'Ch\u1ECB em s\u1EAFm s\u1EEDa b\u1ED9 h\xE0nh ch\u01A1i xu\xE2n',
-              _react2.default.createElement('br', null),
-              'D\u1EADp d\xECu t\xE0i t\u1EED giai nh\xE2n',
-              _react2.default.createElement('br', null),
-              'Ng\u1EF1a xe nh\u01B0 n\u01B0\u1EDBc \xE1o qu\u1EA7n nh\u01B0 n\xEAm',
-              _react2.default.createElement('br', null)
-            ),
-            _react2.default.createElement('br', null),
-            _react2.default.createElement(
-              Element,
-              { name: 'test2', className: _styles2.default.element },
-              '2',
-              _react2.default.createElement('br', null),
-              'Ng\xE0y xu\xE2n con \xE9n \u0111\u01B0a thoi',
-              _react2.default.createElement('br', null),
-              'Thi\u1EC1u quang ch\xEDn ch\u1EE5c \u0111\xE3 ngo\xE0i t\xE1m m\u01B0\u01A1i',
-              _react2.default.createElement('br', null),
-              'C\u1ECF non xanh r\u1EE3n ch\xE2n tr\u1EDDi',
-              _react2.default.createElement('br', null),
-              'C\xE0nh l\xEA tr\u1EAFng \u0111i\u1EC3m m\u1ED9t v\xE0i b\xF4ng hoa',
-              _react2.default.createElement('br', null),
-              'Thanh minh trong ti\u1EBFt th\xE1ng ba',
-              _react2.default.createElement('br', null),
-              'L\u1EC5 l\xE0 t\u1EA3o m\u1ED9 h\u1ED9i l\xE0 \u0111\u1EA1p Thanh',
-              _react2.default.createElement('br', null),
-              'G\u1EA7n xa n\xF4 n\u1EE9c y\u1EBFn anh',
-              _react2.default.createElement('br', null),
-              'Ch\u1ECB em s\u1EAFm s\u1EEDa b\u1ED9 h\xE0nh ch\u01A1i xu\xE2n',
-              _react2.default.createElement('br', null),
-              'D\u1EADp d\xECu t\xE0i t\u1EED giai nh\xE2n',
-              _react2.default.createElement('br', null),
-              'Ng\u1EF1a xe nh\u01B0 n\u01B0\u1EDBc \xE1o qu\u1EA7n nh\u01B0 n\xEAm',
-              _react2.default.createElement('br', null)
-            ),
-            _react2.default.createElement('br', null),
-            _react2.default.createElement(
-              Element,
-              { name: 'test3', className: _styles2.default.element },
-              'test 3',
-              _react2.default.createElement('br', null),
-              'Ng\xE0y xu\xE2n con \xE9n \u0111\u01B0a thoi',
-              _react2.default.createElement('br', null),
-              'Thi\u1EC1u quang ch\xEDn ch\u1EE5c \u0111\xE3 ngo\xE0i t\xE1m m\u01B0\u01A1i',
-              _react2.default.createElement('br', null),
-              'C\u1ECF non xanh r\u1EE3n ch\xE2n tr\u1EDDi',
-              _react2.default.createElement('br', null),
-              'C\xE0nh l\xEA tr\u1EAFng \u0111i\u1EC3m m\u1ED9t v\xE0i b\xF4ng hoa',
-              _react2.default.createElement('br', null),
-              'Thanh minh trong ti\u1EBFt th\xE1ng ba',
-              _react2.default.createElement('br', null),
-              'L\u1EC5 l\xE0 t\u1EA3o m\u1ED9 h\u1ED9i l\xE0 \u0111\u1EA1p Thanh',
-              _react2.default.createElement('br', null),
-              'G\u1EA7n xa n\xF4 n\u1EE9c y\u1EBFn anh',
-              _react2.default.createElement('br', null),
-              'Ch\u1ECB em s\u1EAFm s\u1EEDa b\u1ED9 h\xE0nh ch\u01A1i xu\xE2n',
-              _react2.default.createElement('br', null),
-              'D\u1EADp d\xECu t\xE0i t\u1EED giai nh\xE2n',
-              _react2.default.createElement('br', null),
-              'Ng\u1EF1a xe nh\u01B0 n\u01B0\u1EDBc \xE1o qu\u1EA7n nh\u01B0 n\xEAm',
-              _react2.default.createElement('br', null)
-            ),
-            _react2.default.createElement('br', null),
-            _react2.default.createElement(
-              Element,
-              { name: 'test4', className: _styles2.default.element },
-              'test 4',
-              _react2.default.createElement('br', null),
-              'Ng\xE0y xu\xE2n con \xE9n \u0111\u01B0a thoi',
-              _react2.default.createElement('br', null),
-              'Thi\u1EC1u quang ch\xEDn ch\u1EE5c \u0111\xE3 ngo\xE0i t\xE1m m\u01B0\u01A1i',
-              _react2.default.createElement('br', null),
-              'C\u1ECF non xanh r\u1EE3n ch\xE2n tr\u1EDDi',
-              _react2.default.createElement('br', null),
-              'C\xE0nh l\xEA tr\u1EAFng \u0111i\u1EC3m m\u1ED9t v\xE0i b\xF4ng hoa',
-              _react2.default.createElement('br', null),
-              'Thanh minh trong ti\u1EBFt th\xE1ng ba',
-              _react2.default.createElement('br', null),
-              'L\u1EC5 l\xE0 t\u1EA3o m\u1ED9 h\u1ED9i l\xE0 \u0111\u1EA1p Thanh',
-              _react2.default.createElement('br', null),
-              'G\u1EA7n xa n\xF4 n\u1EE9c y\u1EBFn anh',
-              _react2.default.createElement('br', null),
-              'Ch\u1ECB em s\u1EAFm s\u1EEDa b\u1ED9 h\xE0nh ch\u01A1i xu\xE2n',
-              _react2.default.createElement('br', null),
-              'D\u1EADp d\xECu t\xE0i t\u1EED giai nh\xE2n',
-              _react2.default.createElement('br', null),
-              'Ng\u1EF1a xe nh\u01B0 n\u01B0\u1EDBc \xE1o qu\u1EA7n nh\u01B0 n\xEAm',
-              _react2.default.createElement('br', null)
-            ),
-            _react2.default.createElement('br', null),
-            _react2.default.createElement(
-              Element,
-              { name: 'test5', className: _styles2.default.element },
-              'test 5',
-              _react2.default.createElement('br', null),
-              'Ng\xE0y xu\xE2n con \xE9n \u0111\u01B0a thoi',
-              _react2.default.createElement('br', null),
-              'Thi\u1EC1u quang ch\xEDn ch\u1EE5c \u0111\xE3 ngo\xE0i t\xE1m m\u01B0\u01A1i',
-              _react2.default.createElement('br', null),
-              'C\u1ECF non xanh r\u1EE3n ch\xE2n tr\u1EDDi',
-              _react2.default.createElement('br', null),
-              'C\xE0nh l\xEA tr\u1EAFng \u0111i\u1EC3m m\u1ED9t v\xE0i b\xF4ng hoa',
-              _react2.default.createElement('br', null),
-              'Thanh minh trong ti\u1EBFt th\xE1ng ba',
-              _react2.default.createElement('br', null),
-              'L\u1EC5 l\xE0 t\u1EA3o m\u1ED9 h\u1ED9i l\xE0 \u0111\u1EA1p Thanh',
-              _react2.default.createElement('br', null),
-              'G\u1EA7n xa n\xF4 n\u1EE9c y\u1EBFn anh',
-              _react2.default.createElement('br', null),
-              'Ch\u1ECB em s\u1EAFm s\u1EEDa b\u1ED9 h\xE0nh ch\u01A1i xu\xE2n',
-              _react2.default.createElement('br', null),
-              'D\u1EADp d\xECu t\xE0i t\u1EED giai nh\xE2n',
-              _react2.default.createElement('br', null),
-              'Ng\u1EF1a xe nh\u01B0 n\u01B0\u1EDBc \xE1o qu\u1EA7n nh\u01B0 n\xEAm',
-              _react2.default.createElement('br', null)
+              _react2.default.createElement(
+                Element,
+                { name: 'test5', className: _styles2.default.element },
+                'test 5',
+                _react2.default.createElement('br', null),
+                'Ng\xE0y xu\xE2n con \xE9n \u0111\u01B0a thoi',
+                _react2.default.createElement('br', null),
+                'Thi\u1EC1u quang ch\xEDn ch\u1EE5c \u0111\xE3 ngo\xE0i t\xE1m m\u01B0\u01A1i',
+                _react2.default.createElement('br', null),
+                'C\u1ECF non xanh r\u1EE3n ch\xE2n tr\u1EDDi',
+                _react2.default.createElement('br', null),
+                'C\xE0nh l\xEA tr\u1EAFng \u0111i\u1EC3m m\u1ED9t v\xE0i b\xF4ng hoa',
+                _react2.default.createElement('br', null),
+                'Thanh minh trong ti\u1EBFt th\xE1ng ba',
+                _react2.default.createElement('br', null),
+                'L\u1EC5 l\xE0 t\u1EA3o m\u1ED9 h\u1ED9i l\xE0 \u0111\u1EA1p Thanh',
+                _react2.default.createElement('br', null),
+                'G\u1EA7n xa n\xF4 n\u1EE9c y\u1EBFn anh',
+                _react2.default.createElement('br', null),
+                'Ch\u1ECB em s\u1EAFm s\u1EEDa b\u1ED9 h\xE0nh ch\u01A1i xu\xE2n',
+                _react2.default.createElement('br', null),
+                'D\u1EADp d\xECu t\xE0i t\u1EED giai nh\xE2n',
+                _react2.default.createElement('br', null),
+                'Ng\u1EF1a xe nh\u01B0 n\u01B0\u1EDBc \xE1o qu\u1EA7n nh\u01B0 n\xEAm',
+                _react2.default.createElement('br', null)
+              )
             )
           )
         )
@@ -30107,11 +30126,17 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
 var _reactRouter = __webpack_require__(52);
+
+var _reactRedux = __webpack_require__(24);
+
+var _actions = __webpack_require__(131);
 
 var _BG = __webpack_require__(61);
 
@@ -30135,18 +30160,50 @@ var _About2 = _interopRequireDefault(_About);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Routes = function Routes() {
-  return _react2.default.createElement(
-    _BG2.default,
-    null,
-    _react2.default.createElement(_reactRouter.Route, { exact: true, path: '/', component: _Main2.default }),
-    _react2.default.createElement(_reactRouter.Route, { path: '/home', component: _Home2.default }),
-    _react2.default.createElement(_reactRouter.Route, { path: '/about', component: _About2.default }),
-    _react2.default.createElement(_reactRouter.Route, { path: '/homepage', component: _HomePage2.default })
-  );
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Routes = function (_Component) {
+  _inherits(Routes, _Component);
+
+  function Routes() {
+    _classCallCheck(this, Routes);
+
+    return _possibleConstructorReturn(this, (Routes.__proto__ || Object.getPrototypeOf(Routes)).apply(this, arguments));
+  }
+
+  _createClass(Routes, [{
+    key: 'componentWillMount',
+    value: function componentWillMount() {
+      this.props.getInitial();
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        _BG2.default,
+        null,
+        _react2.default.createElement(_reactRouter.Route, { exact: true, path: '/', component: _Main2.default }),
+        _react2.default.createElement(_reactRouter.Route, { path: '/home', component: _Home2.default }),
+        _react2.default.createElement(_reactRouter.Route, { path: '/about', component: _About2.default }),
+        _react2.default.createElement(_reactRouter.Route, { path: '/homepage', component: _HomePage2.default })
+      );
+    }
+  }]);
+
+  return Routes;
+}(_react.Component);
+
+var mapStateToProps = function mapStateToProps(state) {
+  return {
+    state: state
+  };
 };
 
-exports.default = Routes;
+exports.default = (0, _reactRedux.connect)(mapStateToProps, { getInitial: _actions.getInitial })(Routes);
 
 /***/ }),
 /* 130 */
@@ -30177,6 +30234,10 @@ var _HomePage = __webpack_require__(175);
 
 var _HomePage2 = _interopRequireDefault(_HomePage);
 
+var _Nav = __webpack_require__(185);
+
+var _Nav2 = _interopRequireDefault(_Nav);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -30199,8 +30260,8 @@ var Main = function (_Component) {
     value: function render() {
       return _react2.default.createElement(
         'div',
-        { style: { display: 'flex', flex: 1 } },
-        _react2.default.createElement(_HomePage2.default, null)
+        { style: { display: 'flex', flex: 1, flexDirection: 'column' } },
+        _react2.default.createElement(_Nav2.default, null)
       );
     }
   }]);
@@ -30243,7 +30304,11 @@ Object.keys(_setting).forEach(function (key) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.setTheme = exports.setLanguage = undefined;
+exports.getThemes = exports.getLangs = exports.getInitial = exports.setTheme = exports.setLanguage = undefined;
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
 
 var _types = __webpack_require__(63);
 
@@ -30260,6 +30325,8 @@ var setLanguage = exports.setLanguage = function setLanguage(value) {
     _langs2.default.setLanguage('vn');
   }
 
+  localStorage.setItem('language', value);
+
   return {
     type: _types.SET_LANGUAGE,
     payload: value
@@ -30267,8 +30334,39 @@ var setLanguage = exports.setLanguage = function setLanguage(value) {
 };
 
 var setTheme = exports.setTheme = function setTheme(value) {
+  localStorage.setItem('theme', value);
+
   return {
     type: _types.SET_THEME,
+    payload: value
+  };
+};
+
+var getInitial = exports.getInitial = function getInitial() {
+  return function (dispatch) {
+    var lang = localStorage.getItem('language');
+    var theme = localStorage.getItem('theme');
+
+    if (lang) {
+      dispatch(getLangs(lang));
+    }
+
+    if (theme) {
+      dispatch(getThemes(theme));
+    }
+  };
+};
+
+var getLangs = exports.getLangs = function getLangs(value) {
+  return {
+    type: _types.GET_LANGUAGE,
+    payload: value
+  };
+};
+
+var getThemes = exports.getThemes = function getThemes(value) {
+  return {
+    type: _types.GET_THEME,
     payload: value
   };
 };
@@ -33606,7 +33704,7 @@ exports = module.exports = __webpack_require__(14)(true);
 
 
 // module
-exports.push([module.i, ".styles__scrolls___7r7V::-webkit-scrollbar-thumb {\n  border-radius: 4px;\n  background-color: rgba(0, 0, 0, 0.5);\n  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5); }\n\n.styles__container__1JqDD {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  background-color: transparent;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -ms-flex-direction: column;\n  flex-direction: column; }\n\n.styles__btn__i8GzO {\n  width: 100px;\n  height: 36px;\n  background-color: red;\n  margin-top: 20px; }\n\n.styles__element__HVrEh {\n  color: #fff;\n  font-family: Roboto-light;\n  font-size: 1em;\n  padding: 24px; }\n\n.styles__scrolls___7r7V {\n  margin-top: 20px;\n  padding: 20px;\n  margin: 12px;\n  position: relative;\n  height: 600px;\n  overflow-y: scroll;\n  border: 1px solid #8a2be2; }\n\n.styles__scrolls___7r7V::-webkit-scrollbar {\n  -webkit-appearance: none;\n  width: 7px; }\n\n.styles__bao__2XgFi {\n  border: 1px solid #adff2f;\n  padding: 20px;\n  background: rgba(0, 0, 0, 0.4); }\n", "", {"version":3,"sources":["/Volumes/NghiNguyen/Work/Code/ReactJS/ReactTemplate/src/views/styles.scss"],"names":[],"mappings":"AAAA;EACE,mBAAmB;EACnB,qCAAqC;EACrC,qDAAqD,EAAE;;AAEzD;EACE,qBAAqB;EACrB,qBAAqB;EACrB,cAAc;EACd,yBAAyB;EACzB,sBAAsB;EACtB,wBAAwB;EACxB,0BAA0B;EAC1B,uBAAuB;EACvB,oBAAoB;EACpB,8BAA8B;EAC9B,6BAA6B;EAC7B,8BAA8B;EAC9B,2BAA2B;EAC3B,uBAAuB,EAAE;;AAE3B;EACE,aAAa;EACb,aAAa;EACb,sBAAsB;EACtB,iBAAiB,EAAE;;AAErB;EACE,YAAY;EACZ,0BAA0B;EAC1B,eAAe;EACf,cAAc,EAAE;;AAElB;EACE,iBAAiB;EACjB,cAAc;EACd,aAAa;EACb,mBAAmB;EACnB,cAAc;EACd,mBAAmB;EACnB,0BAA0B,EAAE;;AAE9B;EACE,yBAAyB;EACzB,WAAW,EAAE;;AAEf;EACE,0BAA0B;EAC1B,cAAc;EACd,+BAA+B,EAAE","file":"styles.scss","sourcesContent":[".scrolls::-webkit-scrollbar-thumb {\n  border-radius: 4px;\n  background-color: rgba(0, 0, 0, 0.5);\n  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5); }\n\n.container {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  background-color: transparent;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -ms-flex-direction: column;\n  flex-direction: column; }\n\n.btn {\n  width: 100px;\n  height: 36px;\n  background-color: red;\n  margin-top: 20px; }\n\n.element {\n  color: #fff;\n  font-family: Roboto-light;\n  font-size: 1em;\n  padding: 24px; }\n\n.scrolls {\n  margin-top: 20px;\n  padding: 20px;\n  margin: 12px;\n  position: relative;\n  height: 600px;\n  overflow-y: scroll;\n  border: 1px solid #8a2be2; }\n\n.scrolls::-webkit-scrollbar {\n  -webkit-appearance: none;\n  width: 7px; }\n\n.bao {\n  border: 1px solid #adff2f;\n  padding: 20px;\n  background: rgba(0, 0, 0, 0.4); }\n"],"sourceRoot":""}]);
+exports.push([module.i, ".styles__scrolls___7r7V::-webkit-scrollbar-thumb {\n  border-radius: 4px;\n  background-color: rgba(0, 0, 0, 0.5);\n  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5); }\n\n.styles__container__1JqDD {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  background-color: transparent;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -ms-flex-direction: column;\n  flex-direction: column; }\n\n.styles__btn__i8GzO {\n  width: 100px;\n  height: 36px;\n  background-color: red;\n  margin-top: 20px; }\n\n.styles__element__HVrEh {\n  color: #fff;\n  font-family: Roboto-light;\n  font-size: 1em;\n  padding: 24px; }\n\n.styles__scrolls___7r7V {\n  margin-top: 20px;\n  padding: 20px;\n  margin: 12px;\n  position: relative;\n  height: 600px;\n  overflow-y: scroll;\n  border: 1px solid #8a2be2; }\n\n.styles__scrolls___7r7V::-webkit-scrollbar {\n  -webkit-appearance: none;\n  width: 7px; }\n\n.styles__nav__15s5s {\n  height: 96px;\n  width: 100%;\n  background-color: rgba(255, 255, 255, 0.3);\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center; }\n\n.styles__link__2uLci, .styles__nav__15s5s {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex; }\n\n.styles__link__2uLci {\n  color: skyblue;\n  font-family: Roboto-light;\n  font-size: 2em;\n  -webkit-text-decoration-line: none;\n  text-decoration-line: none; }\n\n.styles__bao__2XgFi, .styles__link__2uLci {\n  padding: 20px; }\n\n.styles__bao__2XgFi {\n  border: 1px solid #adff2f;\n  background: rgba(0, 0, 0, 0.4); }\n", "", {"version":3,"sources":["/Volumes/NghiNguyen/Work/Code/ReactJS/ReactTemplate/src/views/styles.scss"],"names":[],"mappings":"AAAA;EACE,mBAAmB;EACnB,qCAAqC;EACrC,qDAAqD,EAAE;;AAEzD;EACE,qBAAqB;EACrB,qBAAqB;EACrB,cAAc;EACd,yBAAyB;EACzB,sBAAsB;EACtB,wBAAwB;EACxB,0BAA0B;EAC1B,uBAAuB;EACvB,oBAAoB;EACpB,8BAA8B;EAC9B,6BAA6B;EAC7B,8BAA8B;EAC9B,2BAA2B;EAC3B,uBAAuB,EAAE;;AAE3B;EACE,aAAa;EACb,aAAa;EACb,sBAAsB;EACtB,iBAAiB,EAAE;;AAErB;EACE,YAAY;EACZ,0BAA0B;EAC1B,eAAe;EACf,cAAc,EAAE;;AAElB;EACE,iBAAiB;EACjB,cAAc;EACd,aAAa;EACb,mBAAmB;EACnB,cAAc;EACd,mBAAmB;EACnB,0BAA0B,EAAE;;AAE9B;EACE,yBAAyB;EACzB,WAAW,EAAE;;AAEf;EACE,aAAa;EACb,YAAY;EACZ,2CAA2C;EAC3C,0BAA0B;EAC1B,uBAAuB;EACvB,oBAAoB;EACpB,yBAAyB;EACzB,sBAAsB;EACtB,wBAAwB,EAAE;;AAE5B;EACE,qBAAqB;EACrB,qBAAqB;EACrB,cAAc,EAAE;;AAElB;EACE,eAAe;EACf,0BAA0B;EAC1B,eAAe;EACf,mCAAmC;EACnC,2BAA2B,EAAE;;AAE/B;EACE,cAAc,EAAE;;AAElB;EACE,0BAA0B;EAC1B,+BAA+B,EAAE","file":"styles.scss","sourcesContent":[".scrolls::-webkit-scrollbar-thumb {\n  border-radius: 4px;\n  background-color: rgba(0, 0, 0, 0.5);\n  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5); }\n\n.container {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center;\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  background-color: transparent;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -ms-flex-direction: column;\n  flex-direction: column; }\n\n.btn {\n  width: 100px;\n  height: 36px;\n  background-color: red;\n  margin-top: 20px; }\n\n.element {\n  color: #fff;\n  font-family: Roboto-light;\n  font-size: 1em;\n  padding: 24px; }\n\n.scrolls {\n  margin-top: 20px;\n  padding: 20px;\n  margin: 12px;\n  position: relative;\n  height: 600px;\n  overflow-y: scroll;\n  border: 1px solid #8a2be2; }\n\n.scrolls::-webkit-scrollbar {\n  -webkit-appearance: none;\n  width: 7px; }\n\n.nav {\n  height: 96px;\n  width: 100%;\n  background-color: rgba(255, 255, 255, 0.3);\n  -webkit-box-align: center;\n  -ms-flex-align: center;\n  align-items: center;\n  -webkit-box-pack: center;\n  -ms-flex-pack: center;\n  justify-content: center; }\n\n.link, .nav {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex; }\n\n.link {\n  color: skyblue;\n  font-family: Roboto-light;\n  font-size: 2em;\n  -webkit-text-decoration-line: none;\n  text-decoration-line: none; }\n\n.bao, .link {\n  padding: 20px; }\n\n.bao {\n  border: 1px solid #adff2f;\n  background: rgba(0, 0, 0, 0.4); }\n"],"sourceRoot":""}]);
 
 // exports
 exports.locals = {
@@ -33614,6 +33712,8 @@ exports.locals = {
 	"container": "styles__container__1JqDD",
 	"btn": "styles__btn__i8GzO",
 	"element": "styles__element__HVrEh",
+	"nav": "styles__nav__15s5s",
+	"link": "styles__link__2uLci",
 	"bao": "styles__bao__2XgFi"
 };
 
@@ -33645,6 +33745,10 @@ var _Button2 = _interopRequireDefault(_Button);
 var _reactRedux = __webpack_require__(24);
 
 var _actions = __webpack_require__(131);
+
+var _Nav = __webpack_require__(185);
+
+var _Nav2 = _interopRequireDefault(_Nav);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -33700,33 +33804,38 @@ var HomePage = function (_Component) {
     value: function render() {
       return _react2.default.createElement(
         'div',
-        { className: 'container', style: styles.container },
-        _react2.default.createElement(_TextInput2.default, {
-          placeholder: 'Input message',
-          onChange: this.onChange.bind(this)
-        }),
-        _react2.default.createElement('br', null),
+        { style: { display: 'flex', flex: 1, flexDirection: 'column' } },
+        _react2.default.createElement(_Nav2.default, null),
         _react2.default.createElement(
-          _Button2.default,
-          {
-            onClick: this.btnClick.bind(this)
-          },
-          'Light Theme'
-        ),
-        _react2.default.createElement('br', null),
-        _react2.default.createElement('br', null),
-        _react2.default.createElement(
-          _Button2.default,
-          {
-            onClick: this.loadData.bind(this)
-          },
-          'Dark Theme'
-        ),
-        _react2.default.createElement('br', null),
-        _react2.default.createElement(
-          'span',
-          { style: { color: 'white' } },
-          this.props.setting.theme
+          'div',
+          { className: 'container', style: styles.container },
+          _react2.default.createElement(_TextInput2.default, {
+            placeholder: 'Input message',
+            onChange: this.onChange.bind(this)
+          }),
+          _react2.default.createElement('br', null),
+          _react2.default.createElement(
+            _Button2.default,
+            {
+              onClick: this.btnClick.bind(this)
+            },
+            'Light Theme'
+          ),
+          _react2.default.createElement('br', null),
+          _react2.default.createElement('br', null),
+          _react2.default.createElement(
+            _Button2.default,
+            {
+              onClick: this.loadData.bind(this)
+            },
+            'Dark Theme'
+          ),
+          _react2.default.createElement('br', null),
+          _react2.default.createElement(
+            'span',
+            { style: { color: 'white' } },
+            this.props.setting.theme
+          )
         )
       );
     }
@@ -34250,6 +34359,14 @@ var settingReducer = function settingReducer() {
       return _extends({}, state, {
         theme: action.payload
       });
+    case _types.GET_LANGUAGE:
+      return _extends({}, state, {
+        language: action.payload
+      });
+    case _types.GET_THEME:
+      return _extends({}, state, {
+        theme: action.payload
+      });
     default:
       return state;
   }
@@ -34498,6 +34615,101 @@ exports.locals = {
 	"security": "TextInputStyles__security__2t0me",
 	"enableError": "TextInputStyles__enableError__1bzvA"
 };
+
+/***/ }),
+/* 185 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(1);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouterRedux = __webpack_require__(12);
+
+var _reactRedux = __webpack_require__(24);
+
+var _styles = __webpack_require__(173);
+
+var _styles2 = _interopRequireDefault(_styles);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Link = function Link(_ref) {
+  var name = _ref.name,
+      onClick = _ref.onClick;
+  return _react2.default.createElement(
+    'a',
+    {
+      href: '#',
+      onClick: onClick,
+      className: _styles2.default.link },
+    name
+  );
+};
+
+var Navigate = [{ name: 'Main', path: '/' }, { name: 'Home', path: 'home' }, { name: 'About', path: 'about' }, { name: 'Home Page', path: 'homepage' }];
+
+var Nav = function (_Component) {
+  _inherits(Nav, _Component);
+
+  function Nav() {
+    _classCallCheck(this, Nav);
+
+    return _possibleConstructorReturn(this, (Nav.__proto__ || Object.getPrototypeOf(Nav)).apply(this, arguments));
+  }
+
+  _createClass(Nav, [{
+    key: 'onClick',
+    value: function onClick(name) {
+      console.log(name);
+      this.props.dispatch((0, _reactRouterRedux.push)(name));
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _this2 = this;
+
+      return _react2.default.createElement(
+        'div',
+        { className: _styles2.default.nav },
+        Navigate.map(function (t, id) {
+          return _react2.default.createElement(Link, {
+            key: id,
+            name: t.name,
+            onClick: function onClick() {
+              return _this2.onClick(t.path);
+            }
+          });
+        })
+      );
+    }
+  }]);
+
+  return Nav;
+}(_react.Component);
+
+var mapStateToProps = function mapStateToProps(state) {
+  return {
+    state: state
+  };
+};
+
+exports.default = (0, _reactRedux.connect)(mapStateToProps)(Nav);
 
 /***/ })
 /******/ ]);

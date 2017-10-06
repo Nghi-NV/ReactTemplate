@@ -1,6 +1,8 @@
 import {
   SET_LANGUAGE,
-  SET_THEME
+  SET_THEME,
+  GET_LANGUAGE,
+  GET_THEME
 } from '../actions/types';
 
 const INITIAL = {
@@ -19,7 +21,17 @@ const settingReducer = (state = INITIAL, action) => {
       return {
         ...state,
         theme: action.payload
-      }  
+      }
+    case GET_LANGUAGE:  
+      return {
+        ...state,
+        language: action.payload
+      }
+    case GET_THEME:  
+    return {
+      ...state,
+      theme: action.payload
+    }  
     default:
       return state
   }

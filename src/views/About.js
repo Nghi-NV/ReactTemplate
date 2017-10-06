@@ -5,6 +5,7 @@ import { push } from 'react-router-redux';
 
 import Scroll from 'react-scroll';
 
+import Nav from './Nav';
 import Button from '../components/base/Button';
 import Checkbox from '../components/base/Checkbox';
 import Lists from '../components/base/Lists';
@@ -64,93 +65,95 @@ class About extends Component {
   }
 
   render() {
-    console.log('height', this.state.height)
     return (
-      <div className={styles.container}>
-        <Switch
-          onClick={this.onClick.bind(this)}
+      <div style={{display: 'flex', flex: 1, flexDirection: 'column'}}>
+        <Nav/>
+        <div className={styles.container}>
+          <Switch
+            onClick={this.onClick.bind(this)}
+            
+          /><hr/>
+          <li> <a className={styles.element} onClick={() => scroll.scrollToBottom()}>Scroll To Bottom</a></li>
+          <Link activeClass="active" className={styles.element} to="test5" spy={true} smooth={true} duration={500} >Test 1</Link>
+          <br/>
+          <div className={styles.bao}>
+          <div 
+            onScroll={this.handleScroll.bind(this)}
+            className={styles.scrolls}>
           
-        />
-        <li> <a className={styles.element} onClick={() => scroll.scrollToBottom()}>Scroll To Bottom</a></li>
-        <Link activeClass="active" className={styles.element} to="test5" spy={true} smooth={true} duration={500} >Test 1</Link>
-        <br/>
-        <div className={styles.bao}>
-        <div 
-          onScroll={this.handleScroll.bind(this)}
-          className={styles.scrolls}>
-        
-        <Element name="test1" className={styles.element} >
-          test 1<br/>
-          Ngày xuân con én đưa thoi<br/>
-          Thiều quang chín chục đã ngoài tám mươi<br/>
-          Cỏ non xanh rợn chân trời<br/>
-          Cành lê trắng điểm một vài bông hoa<br/>
-          Thanh minh trong tiết tháng ba<br/>
-          Lễ là tảo mộ hội là đạp Thanh<br/>
-          Gần xa nô nức yến anh<br/>
-          Chị em sắm sửa bộ hành chơi xuân<br/>
-          Dập dìu tài tử giai nhân<br/>
-          Ngựa xe như nước áo quần như nêm<br/>
-        </Element><br/>
+          <Element name="test1" className={styles.element} >
+            test 1<br/>
+            Ngày xuân con én đưa thoi<br/>
+            Thiều quang chín chục đã ngoài tám mươi<br/>
+            Cỏ non xanh rợn chân trời<br/>
+            Cành lê trắng điểm một vài bông hoa<br/>
+            Thanh minh trong tiết tháng ba<br/>
+            Lễ là tảo mộ hội là đạp Thanh<br/>
+            Gần xa nô nức yến anh<br/>
+            Chị em sắm sửa bộ hành chơi xuân<br/>
+            Dập dìu tài tử giai nhân<br/>
+            Ngựa xe như nước áo quần như nêm<br/>
+          </Element><br/>
 
-        <Element name="test2" className={styles.element}>
-           2<br/>
-           Ngày xuân con én đưa thoi<br/>
-           Thiều quang chín chục đã ngoài tám mươi<br/>
-           Cỏ non xanh rợn chân trời<br/>
-           Cành lê trắng điểm một vài bông hoa<br/>
-           Thanh minh trong tiết tháng ba<br/>
-           Lễ là tảo mộ hội là đạp Thanh<br/>
-           Gần xa nô nức yến anh<br/>
-           Chị em sắm sửa bộ hành chơi xuân<br/>
-           Dập dìu tài tử giai nhân<br/>
-           Ngựa xe như nước áo quần như nêm<br/>
-        </Element><br/>
+          <Element name="test2" className={styles.element}>
+            2<br/>
+            Ngày xuân con én đưa thoi<br/>
+            Thiều quang chín chục đã ngoài tám mươi<br/>
+            Cỏ non xanh rợn chân trời<br/>
+            Cành lê trắng điểm một vài bông hoa<br/>
+            Thanh minh trong tiết tháng ba<br/>
+            Lễ là tảo mộ hội là đạp Thanh<br/>
+            Gần xa nô nức yến anh<br/>
+            Chị em sắm sửa bộ hành chơi xuân<br/>
+            Dập dìu tài tử giai nhân<br/>
+            Ngựa xe như nước áo quần như nêm<br/>
+          </Element><br/>
 
-        <Element name="test3" className={styles.element}>
-          test 3<br/>
-          Ngày xuân con én đưa thoi<br/>
-          Thiều quang chín chục đã ngoài tám mươi<br/>
-          Cỏ non xanh rợn chân trời<br/>
-          Cành lê trắng điểm một vài bông hoa<br/>
-          Thanh minh trong tiết tháng ba<br/>
-          Lễ là tảo mộ hội là đạp Thanh<br/>
-          Gần xa nô nức yến anh<br/>
-          Chị em sắm sửa bộ hành chơi xuân<br/>
-          Dập dìu tài tử giai nhân<br/>
-          Ngựa xe như nước áo quần như nêm<br/>
-        </Element><br/>
+          <Element name="test3" className={styles.element}>
+            test 3<br/>
+            Ngày xuân con én đưa thoi<br/>
+            Thiều quang chín chục đã ngoài tám mươi<br/>
+            Cỏ non xanh rợn chân trời<br/>
+            Cành lê trắng điểm một vài bông hoa<br/>
+            Thanh minh trong tiết tháng ba<br/>
+            Lễ là tảo mộ hội là đạp Thanh<br/>
+            Gần xa nô nức yến anh<br/>
+            Chị em sắm sửa bộ hành chơi xuân<br/>
+            Dập dìu tài tử giai nhân<br/>
+            Ngựa xe như nước áo quần như nêm<br/>
+          </Element><br/>
 
-        <Element name="test4" className={styles.element}>
-          test 4<br/>
-          Ngày xuân con én đưa thoi<br/>
-          Thiều quang chín chục đã ngoài tám mươi<br/>
-          Cỏ non xanh rợn chân trời<br/>
-          Cành lê trắng điểm một vài bông hoa<br/>
-          Thanh minh trong tiết tháng ba<br/>
-          Lễ là tảo mộ hội là đạp Thanh<br/>
-          Gần xa nô nức yến anh<br/>
-          Chị em sắm sửa bộ hành chơi xuân<br/>
-          Dập dìu tài tử giai nhân<br/>
-          Ngựa xe như nước áo quần như nêm<br/>
-        </Element><br/>
+          <Element name="test4" className={styles.element}>
+            test 4<br/>
+            Ngày xuân con én đưa thoi<br/>
+            Thiều quang chín chục đã ngoài tám mươi<br/>
+            Cỏ non xanh rợn chân trời<br/>
+            Cành lê trắng điểm một vài bông hoa<br/>
+            Thanh minh trong tiết tháng ba<br/>
+            Lễ là tảo mộ hội là đạp Thanh<br/>
+            Gần xa nô nức yến anh<br/>
+            Chị em sắm sửa bộ hành chơi xuân<br/>
+            Dập dìu tài tử giai nhân<br/>
+            Ngựa xe như nước áo quần như nêm<br/>
+          </Element><br/>
 
-        <Element name="test5" className={styles.element}>
-          test 5<br/>
-          Ngày xuân con én đưa thoi<br/>
-          Thiều quang chín chục đã ngoài tám mươi<br/>
-          Cỏ non xanh rợn chân trời<br/>
-          Cành lê trắng điểm một vài bông hoa<br/>
-          Thanh minh trong tiết tháng ba<br/>
-          Lễ là tảo mộ hội là đạp Thanh<br/>
-          Gần xa nô nức yến anh<br/>
-          Chị em sắm sửa bộ hành chơi xuân<br/>
-          Dập dìu tài tử giai nhân<br/>
-          Ngựa xe như nước áo quần như nêm<br/>
-        </Element>
+          <Element name="test5" className={styles.element}>
+            test 5<br/>
+            Ngày xuân con én đưa thoi<br/>
+            Thiều quang chín chục đã ngoài tám mươi<br/>
+            Cỏ non xanh rợn chân trời<br/>
+            Cành lê trắng điểm một vài bông hoa<br/>
+            Thanh minh trong tiết tháng ba<br/>
+            Lễ là tảo mộ hội là đạp Thanh<br/>
+            Gần xa nô nức yến anh<br/>
+            Chị em sắm sửa bộ hành chơi xuân<br/>
+            Dập dìu tài tử giai nhân<br/>
+            Ngựa xe như nước áo quần như nêm<br/>
+          </Element>
+          </div>
+          </div>
         </div>
-        </div>
-      </div>
+      </div>  
     );
   }
 }

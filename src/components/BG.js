@@ -43,7 +43,6 @@ const styles = {
 }
 
 const mapStateToProps = (state) => {
-  console.log('Current theme: ', state.setting.theme)
   return {
     theme: state.setting.theme
   }

@@ -4,6 +4,7 @@ import Button from '../components/base/Button';
 
 import { connect } from 'react-redux';
 import { setTheme } from '../actions';
+import Nav from './Nav';
 
 class HomePage extends Component {
   constructor(props) {
@@ -39,28 +40,32 @@ class HomePage extends Component {
 
   render() {
     return (
-      <div className="container" style={styles.container}>
-        <TextInput
-          placeholder="Input message"
-          onChange={this.onChange.bind(this)}
-        />
-        <br/>
-        <Button
-          onClick={this.btnClick.bind(this)}
-        >
-          Light Theme
-        </Button>
-        <br/><br/>
-        <Button
-          onClick={this.loadData.bind(this)}
-        >
-          Dark Theme
-        </Button>
+      <div style={{display: 'flex', flex: 1, flexDirection: 'column'}}>
+        <Nav/>
+    
+        <div className="container" style={styles.container}>
+          <TextInput
+            placeholder="Input message"
+            onChange={this.onChange.bind(this)}
+          />
+          <br/>
+          <Button
+            onClick={this.btnClick.bind(this)}
+          >
+            Light Theme
+          </Button>
+          <br/><br/>
+          <Button
+            onClick={this.loadData.bind(this)}
+          >
+            Dark Theme
+          </Button>
 
-        <br/>
-        <span style={{color: 'white'}}>
-          {this.props.setting.theme}
-        </span>
+          <br/>
+          <span style={{color: 'white'}}>
+            {this.props.setting.theme}
+          </span>
+        </div>
       </div>
     );
   }
